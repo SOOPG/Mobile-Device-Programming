@@ -1,18 +1,165 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-    <TextView
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:text="Hello World!"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintTop_toTopOf="parent" />
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteX="-1dp"
+    tools:layout_editor_absoluteY="1dp">
 
-  </androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:id="@+id/imageApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:src="@drawable/dag_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="Main Page Logo" />
+
+    <TextView
+        android:id="@+id/pageTitle"
+        android:layout_width="60dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/lalezar_regular"
+        android:gravity="center"
+        android:text="Login"
+        android:textColor="#121212"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageApp"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/userLoginFirstName"
+        android:layout_width="127dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/background_box"
+        android:fontFamily="@font/lalezar_regular"
+        android:gravity="center"
+        android:hint="First Name"
+        android:inputType="textPersonName"
+        android:textColor="#121212"
+        android:textColorHint="#80121212"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pageTitle" />
+
+    <EditText
+        android:id="@+id/userLoginLastName"
+        android:layout_width="127dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="48dp"
+        android:background="@drawable/background_box"
+        android:fontFamily="@font/lalezar_regular"
+        android:gravity="center"
+        android:hint="Last Name"
+        android:inputType="textPersonName"
+        android:textColor="#121212"
+        android:textColorHint="#80121212"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pageTitle" />
+
+    <EditText
+        android:id="@+id/userLoginEmail"
+        android:layout_width="313dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/background_box"
+        android:fontFamily="@font/lalezar_regular"
+        android:gravity="center"
+        android:hint="Your Email"
+        android:inputType="textEmailAddress"
+        android:textColor="#121212"
+        android:textColorHint="#80121212"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pageTitle" />
+
+    <EditText
+        android:id="@+id/userLoginPassword"
+        android:layout_width="311dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/background_box"
+        android:fontFamily="@font/lalezar_regular"
+        android:gravity="center"
+        android:hint="Your Password"
+        android:inputType="textPassword"
+        android:textColor="#121212"
+        android:textColorHint="#80121212"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userLoginEmail" />
+
+    <EditText
+        android:id="@+id/userLoginConfirmPassword"
+        android:layout_width="311dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/background_box"
+        android:fontFamily="@font/lalezar_regular"
+        android:gravity="center"
+        android:hint="Confirm Password"
+        android:inputType="textPassword"
+        android:textColor="#121212"
+        android:textColorHint="#80121212"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userLoginPassword" />
+
+    <TextView
+        android:id="@+id/NoAccount"
+        android:layout_width="69dp"
+        android:layout_height="13dp"
+        android:layout_marginStart="132dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/lalezar_regular"
+        android:gravity="center"
+        android:text="No account?"
+        android:textColor="#121212"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userLoginConfirmPassword" />
+
+    <TextView
+        android:id="@+id/signUpTextNavigationToSignUpPage"
+        android:layout_width="69dp"
+        android:layout_height="13dp"
+        android:layout_marginTop="20dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:fontFamily="@font/lalezar_regular"
+        android:gravity="center"
+        android:onClick="onSignUpTextClicked"
+        android:text="Sign Up Here"
+        android:textColor="#1F83F8"
+        android:textSize="10sp"
+        android:underlineText="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/NoAccount"
+        app:layout_constraintTop_toBottomOf="@+id/userLoginConfirmPassword" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+
+
+
+
