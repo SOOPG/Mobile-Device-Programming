@@ -4,9 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    tools:layout_editor_absoluteX="-1dp"
-    tools:layout_editor_absoluteY="1dp">
+    tools:context=".SignUpActivity">
 
     <ImageView
         android:id="@+id/imageApp"
@@ -18,26 +16,26 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="Main Page App Logo"/>
+        android:contentDescription="Sign-up Page App Logo" />
 
     <TextView
-        android:id="@+id/pageTitle_LoginPage"
-        android:layout_width="60dp"
-        android:layout_height="33dp"
+        android:id="@+id/pageTitle_SignUpPage"
+        android:layout_width="102dp"
+        android:layout_height="32dp"
         android:layout_marginTop="32dp"
         android:fontFamily="@font/lalezar_regular"
         android:gravity="center"
-        android:text="Login"
+        android:text="Sign Up"
         android:textColor="#121212"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageApp"
-        tools:ignore="MissingConstraints"/>
+        tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/userLoginFirstName"
+        android:id="@+id/userSignUpFirstName"
         android:layout_width="127dp"
         android:layout_height="42dp"
         android:layout_marginStart="48dp"
@@ -50,10 +48,10 @@
         android:textColor="#121212"
         android:textColorHint="#80121212"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pageTitle_LoginPage"/>
+        app:layout_constraintTop_toBottomOf="@+id/pageTitle_SignUpPage" />
 
     <EditText
-        android:id="@+id/userLoginLastName"
+        android:id="@+id/userSignUpLastName"
         android:layout_width="127dp"
         android:layout_height="42dp"
         android:layout_marginTop="28dp"
@@ -66,10 +64,10 @@
         android:textColor="#121212"
         android:textColorHint="#80121212"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pageTitle_LoginPage"/>
+        app:layout_constraintTop_toBottomOf="@+id/pageTitle_SignUpPage" />
 
     <EditText
-        android:id="@+id/userLoginEmail"
+        android:id="@+id/userSignUpEmail"
         android:layout_width="313dp"
         android:layout_height="42dp"
         android:layout_marginTop="100dp"
@@ -83,10 +81,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pageTitle_LoginPage"/>
+        app:layout_constraintTop_toBottomOf="@+id/pageTitle_SignUpPage" />
 
     <EditText
-        android:id="@+id/userLoginPassword"
+        android:id="@+id/userSignUpPassword"
         android:layout_width="311dp"
         android:layout_height="42dp"
         android:layout_marginTop="24dp"
@@ -99,10 +97,10 @@
         android:textColorHint="#80121212"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/userLoginEmail"/>
+        app:layout_constraintTop_toBottomOf="@+id/userSignUpEmail" />
 
     <EditText
-        android:id="@+id/userLoginConfirmPassword"
+        android:id="@+id/userSignUpConfirmPassword"
         android:layout_width="311dp"
         android:layout_height="42dp"
         android:layout_marginTop="24dp"
@@ -116,49 +114,72 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/userLoginPassword"/>
+        app:layout_constraintTop_toBottomOf="@+id/userSignUpPassword" />
 
     <TextView
-        android:id="@+id/NoAccount"
-        android:layout_width="69dp"
-        android:layout_height="13dp"
-        android:layout_marginStart="132dp"
+        android:id="@+id/HaveAccount"
+        android:layout_width="83dp"
+        android:layout_height="17dp"
+        android:layout_marginStart="123dp"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/lalezar_regular"
         android:gravity="center"
-        android:text="No account?"
+        android:text="Have an account?"
         android:textColor="#121212"
         android:textSize="10sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/userLoginConfirmPassword"/>
+        app:layout_constraintTop_toBottomOf="@+id/ResetPassword" />
 
     <TextView
         android:id="@+id/signUpTextNavigationToLoginPage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_width="71dp"
+        android:layout_height="17dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="126dp"
         android:clickable="true"
         android:focusable="true"
         android:fontFamily="@font/lalezar_regular"
         android:gravity="center"
-        android:onClick="onSignUpTextClicked"
-        android:text="Sign Up Here"
+        android:onClick="onLoginTextClicked"
+        android:text="Login Here"
         android:textColor="#1F83F8"
         android:textSize="10sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/NoAccount"
-        app:layout_constraintTop_toBottomOf="@+id/userLoginConfirmPassword"/>
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/HaveAccount"
+        app:layout_constraintTop_toBottomOf="@+id/resetPasswordTextNavigationToResetPasswordPage" />
+
+    <TextView
+        android:id="@+id/ResetPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/lalezar_regular"
+        android:gravity="center"
+        android:text="Forgot Password?"
+        android:textColor="#121212"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userSignUpConfirmPassword" />
+
+    <TextView
+        android:id="@+id/resetPasswordTextNavigationToResetPasswordPage"
+        android:layout_width="72dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="128dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:fontFamily="@font/lalezar_regular"
+        android:gravity="center"
+        android:onClick="onResetPasswordTextClicked"
+        android:text="Reset Password"
+        android:textColor="#1F83F8"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ResetPassword"
+        app:layout_constraintTop_toBottomOf="@+id/userSignUpConfirmPassword" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
-
-
-
-
-
-
-
-
