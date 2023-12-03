@@ -2,4 +2,7 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- UI Main Colour -->
+    <color name="bright_yellow">#FAFF00</color>
 </resources>

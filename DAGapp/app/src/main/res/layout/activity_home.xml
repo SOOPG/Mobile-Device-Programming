@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+
+
+    <!-- Profile section -->
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="320dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/background_box"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+    </LinearLayout>
+
+    <!-- Profile Picture -->
+    <ImageView
+        android:id="@+id/profile_image"
+        android:layout_width="56dp"
+        android:layout_height="54dp"
+        android:src="@drawable/profile"
+        app:layout_constraintBottom_toBottomOf="@+id/user_name"
+        app:layout_constraintEnd_toStartOf="@+id/user_name"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout" />
+
+    <!-- User Name -->
+    <TextView
+        android:id="@+id/user_name"
+        android:layout_width="118dp"
+        android:layout_height="59dp"
+        android:background="@drawable/background_box"
+        android:gravity="center"
+        android:text="Soo Min Hao"
+        android:textAppearance="?attr/textAppearanceListItem"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout" />
+
+    <!-- User Role -->
+    <TextView
+        android:id="@+id/user_title"
+        android:layout_width="90dp"
+        android:layout_height="30dp"
+        android:text="Vice Pres."
+        android:gravity="center"
+        android:textAppearance="?attr/textAppearanceListItemSmall"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+        app:layout_constraintStart_toEndOf="@+id/user_name"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout" />
+
+    <!--Reminder Section -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/reminder_card"
+        android:layout_width="320dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:contentPadding="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout"
+        app:cardBackgroundColor="@color/bright_yellow">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Reminder title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:gravity="left"
+                android:text="Reminder"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="8dp"
+                android:text="Hold a meeting today"
+                android:textAppearance="?attr/textAppearanceListItem" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="8dp"
+                android:text="Collab with DAG Club"
+                android:textAppearance="?attr/textAppearanceListItem" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="8dp"
+                android:text="Submit EPF Form"
+                android:textAppearance="?attr/textAppearanceListItem" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="8dp"
+                android:text="Shoot an event with 18 Grams Coffee"
+                android:textAppearance="?attr/textAppearanceListItem" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="8dp"
+                android:text="Edit video on 18 Grams"
+                android:textAppearance="?attr/textAppearanceListItem" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="8dp"
+                android:text="Hold a feedback form for induction"
+                android:textAppearance="?attr/textAppearanceListItem" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!--Image Buttons-->
+    <ImageView
+        android:id="@+id/buttonSettings"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="36dp"
+        android:layout_weight="1"
+        android:onClick="onSettingsClicked"
+        android:src="@drawable/navigation_tab_setting"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonInventory" />
+
+    <ImageView
+        android:id="@+id/buttonDepartments"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="44dp"
+        android:layout_weight="1"
+        android:onClick="onDepartmentsClicked"
+        android:src="@drawable/navigation_tab_departments"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reminder_card" />
+
+    <ImageView
+        android:id="@+id/buttonEvents"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="40dp"
+        android:layout_weight="1"
+        android:onClick="onEventsClicked"
+        android:src="@drawable/navigation_tab_events"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonDepartments" />
+
+    <ImageView
+        android:id="@+id/buttonFinance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="40dp"
+        android:layout_weight="1"
+        android:onClick="onFinanceClicked"
+        android:src="@drawable/navigation_tab_finance"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonEvents" />
+
+    <ImageView
+        android:id="@+id/buttonInventory"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="36dp"
+        android:layout_weight="1"
+        android:onClick="onInventoryClicked"
+        android:src="@drawable/navigation_tab_inventory"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonReminder" />
+
+    <ImageView
+        android:id="@+id/buttonReminder"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="36dp"
+        android:layout_weight="1"
+        android:onClick="onReminderClicked"
+        android:src="@drawable/navigation_tab_reminder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reminder_card" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
