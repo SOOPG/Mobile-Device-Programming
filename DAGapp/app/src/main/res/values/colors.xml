@@ -3,6 +3,16 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
+
     <!-- UI Main Colour -->
     <color name="bright_yellow">#FAFF00</color>
+    <color name="greyish_black">#121212</color>
+
+    <!-- Departments Information Colour-->
+    <color name="art_department_purple">#8000FF</color>
+    <color name="photo_department_brown">#ECC863</color>
+    <color name="market_department_orange">#FF5C00</color>
+    <color name="radio_department_green">#04FBB1</color>
+    <color name="video_department_pink">#FF007B</color>
+
 </resources>

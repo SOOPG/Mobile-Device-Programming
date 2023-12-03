@@ -14,7 +14,8 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     public void onDepartmentsClicked(View view) {
-        // Navigate to Departments click event
+        Intent intent = new Intent(HomeActivity.this, DepartmentInfoActivity.class);
+        startActivity(intent);
     }
 
     public void onEventsClicked(View view) {

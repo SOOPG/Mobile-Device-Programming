@@ -21,9 +21,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onLoginButtonClicked(View view) {
-        // This is where you would normally verify the credentials
-        // For now, we'll just go straight to the home page
-
+        // For debugging
         Intent intent = new Intent(MainActivity.this, HomeActivity.class);
         startActivity(intent);
     }
