@@ -18,4 +18,25 @@ public class DepartmentInfoActivity extends AppCompatActivity {
         finish(); // Closes this activity and returns to the previous one
     }
 
+    //Navigate to edit department page
+    public void editArtDepartment(View view) {
+        Intent intent = new Intent(DepartmentInfoActivity.this, AddDepartmentInfoActivity.class);
+        startActivity(intent);
+    }
+    public void editRadioDepartment(View view) {
+        Intent intent = new Intent(DepartmentInfoActivity.this, AddDepartmentInfoActivity.class);
+        startActivity(intent);
+    }
+    public void editPhotoDepartment(View view) {
+        Intent intent = new Intent(DepartmentInfoActivity.this, AddDepartmentInfoActivity.class);
+        startActivity(intent);
+    }
+    public void editVideoDepartment(View view) {
+        Intent intent = new Intent(DepartmentInfoActivity.this, AddDepartmentInfoActivity.class);
+        startActivity(intent);
+    }
+    public void editMarketingDepartment(View view) {
+        Intent intent = new Intent(DepartmentInfoActivity.this, AddDepartmentInfoActivity.class);
+        startActivity(intent);
+    }
 }

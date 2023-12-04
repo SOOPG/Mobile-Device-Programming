@@ -53,7 +53,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="42dp"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/department_digitalarts" />
+                    android:src="@drawable/department_digitalarts"
+                    android:clickable="true"
+                    android:onClick="editArtDepartment"/>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -105,7 +107,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="42dp"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/department_radiography" />
+                    android:src="@drawable/department_radiography"
+                    android:clickable="true"
+                    android:onClick="editRadioDepartment"/>
+
 
                 <TextView
                     android:layout_width="match_parent"
@@ -157,7 +162,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="42dp"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/department_photography" />
+                    android:src="@drawable/department_photography"
+                    android:clickable="true"
+                    android:onClick="editPhotoDepartment"/>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -209,7 +216,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="42dp"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/department_videography" />
+                    android:src="@drawable/department_videography"
+                    android:clickable="true"
+                    android:onClick="editVideoDepartment"/>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -261,7 +270,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="42dp"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/department_marketing" />
+                    android:src="@drawable/department_marketing"
+                    android:clickable="true"
+                    android:onClick="editMarketingDepartment"/>
 
                 <TextView
                     android:layout_width="match_parent"
