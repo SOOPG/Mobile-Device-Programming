@@ -24,6 +24,8 @@ public class HomeActivity extends AppCompatActivity {
 
     public void onFinanceClicked(View view) {
         // Navigate to Finance page
+        Intent intent = new Intent(HomeActivity.this, FinanceMainActivity.class);
+        startActivity(intent);
     }
 
     public void onReminderClicked(View view) {
@@ -35,7 +37,9 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     public void onSettingsClicked(View view) {
-        // Navigate to Settings click event
+        // Navigate to Settings page
+        Intent intent = new Intent(HomeActivity.this, SettingsActivity.class);
+        startActivity(intent);
     }
 
 }
