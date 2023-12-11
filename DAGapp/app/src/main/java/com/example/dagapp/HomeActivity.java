@@ -30,6 +30,8 @@ public class HomeActivity extends AppCompatActivity {
 
     public void onReminderClicked(View view) {
         // Navigate to Reminder page
+        Intent intent = new Intent(HomeActivity.this, RemindersActivity.class);
+        startActivity(intent);
     }
 
     public void onInventoryClicked(View view) {
