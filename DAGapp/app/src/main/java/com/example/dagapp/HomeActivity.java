@@ -20,6 +20,8 @@ public class HomeActivity extends AppCompatActivity {
 
     public void onEventsClicked(View view) {
         // Navigate to Events page
+        Intent intent = new Intent(HomeActivity.this, ClubEventsActivity.class);
+        startActivity(intent);
     }
 
     public void onFinanceClicked(View view) {
@@ -36,6 +38,8 @@ public class HomeActivity extends AppCompatActivity {
 
     public void onInventoryClicked(View view) {
         // Navigate to Inventory page
+        Intent intent = new Intent(HomeActivity.this, ClubInventoryActivity.class);
+        startActivity(intent);
     }
 
     public void onSettingsClicked(View view) {

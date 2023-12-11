@@ -19,24 +19,31 @@ public class FinanceMainActivity extends AppCompatActivity {
     }
 
     public void onCalculatorClicked(View view) {
+        //Start calculator
         Intent intent = new Intent(FinanceMainActivity.this, CalculatorActivity.class);
         startActivity(intent);
     }
 
     public void onExpensesClicked(View view) {
-
+        //Start expenses
+        Intent intent = new Intent(FinanceMainActivity.this, ExpensesActivity.class);
+        startActivity(intent);
     }
 
     public void onIncomeClicked(View view) {
-
+        //Start income
+        Intent intent = new Intent(FinanceMainActivity.this, IncomeActivity.class);
+        startActivity(intent);
     }
 
     public void onBudgetingClicked(View view) {
-
+        Intent intent = new Intent(FinanceMainActivity.this, BudgetingActivity.class);
+        startActivity(intent);
     }
 
     public void onHistoryClicked(View view) {
-
+        Intent intent = new Intent(FinanceMainActivity.this, FinanceHistoryActivity.class);
+        startActivity(intent);
     }
 
 }
