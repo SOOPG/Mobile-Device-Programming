@@ -68,6 +68,7 @@
                     android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/arts_head_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
@@ -77,11 +78,13 @@
                     android:textSize="14sp" />
 
                 <TextView
+                    android:id="@+id/arts_head_contact"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:gravity="center_horizontal"
-                    android:text="01xx-xxxxxxx"
+                    android:text="011-1111111"
+                    android:autoLink="phone"
                     android:textColor="@color/greyish_black"
                     android:textSize="14sp" />
             </LinearLayout>
@@ -111,7 +114,6 @@
                     android:clickable="true"
                     android:onClick="editRadioDepartment"/>
 
-
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -123,6 +125,7 @@
                     android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/radio_head_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
@@ -132,11 +135,13 @@
                     android:textSize="14sp" />
 
                 <TextView
+                    android:id="@+id/radio_head_contact"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:gravity="center_horizontal"
-                    android:text="01xx-xxxxxxx"
+                    android:text="022-2222222"
+                    android:autoLink="phone"
                     android:textColor="@color/greyish_black"
                     android:textSize="14sp" />
             </LinearLayout>
@@ -177,6 +182,7 @@
                     android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/photo_head_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
@@ -186,11 +192,13 @@
                     android:textSize="14sp" />
 
                 <TextView
+                    android:id="@+id/photo_head_contact"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:gravity="center_horizontal"
-                    android:text="01xx-xxxxxxx"
+                    android:text="033-3333333"
+                    android:autoLink="phone"
                     android:textColor="@color/greyish_black"
                     android:textSize="14sp" />
             </LinearLayout>
@@ -231,6 +239,7 @@
                     android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/video_head_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
@@ -240,11 +249,13 @@
                     android:textSize="14sp" />
 
                 <TextView
+                    android:id="@+id/video_head_contact"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:gravity="center_horizontal"
                     android:text="None"
+                    android:autoLink="phone"
                     android:textColor="@color/greyish_black"
                     android:textSize="14sp" />
             </LinearLayout>
@@ -285,6 +296,7 @@
                     android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/marketing_head_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
@@ -294,11 +306,13 @@
                     android:textSize="14sp" />
 
                 <TextView
+                    android:id="@+id/marketing_head_contact"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:gravity="center_horizontal"
-                    android:text="01xx-xxxxxxx"
+                    android:text="055-5555555"
+                    android:autoLink="phone"
                     android:textColor="@color/greyish_black"
                     android:textSize="14sp" />
             </LinearLayout>

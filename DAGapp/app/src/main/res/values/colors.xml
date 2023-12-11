@@ -9,10 +9,10 @@
     <color name="greyish_black">#121212</color>
 
     <!-- Departments Information Colour-->
-    <color name="art_department_purple">#8000FF</color>
+    <color name="art_department_purple">#C8A0EF</color>
     <color name="photo_department_brown">#ECC863</color>
-    <color name="market_department_orange">#FF5C00</color>
-    <color name="radio_department_green">#04FBB1</color>
-    <color name="video_department_pink">#FF007B</color>
+    <color name="market_department_orange">#EF905A</color>
+    <color name="radio_department_green">#92F6D8</color>
+    <color name="video_department_pink">#ED72AD</color>
 
 </resources>

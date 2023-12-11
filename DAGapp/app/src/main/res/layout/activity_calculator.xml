@@ -42,99 +42,121 @@
         app:layout_constraintStart_toStartOf="@+id/imageViewBankBalance"
         app:layout_constraintTop_toTopOf="@+id/imageViewBankBalance" />
 
-    <TextView
+    <EditText
         android:id="@+id/inputCalculator"
+        android:inputType="numberDecimal"
         android:layout_width="168dp"
         android:layout_height="35dp"
         android:layout_marginTop="86dp"
         android:background="@drawable/background_box"
         android:drawablePadding="8dp"
         android:gravity="center"
-        android:hint="Input Values"
+        android:hint="1st Input"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/returnButton" />
 
-    <ImageView
-        android:id="@+id/calAdd"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="60dp"
-        android:clickable="true"
-        android:src="@drawable/cal_add"
+    <EditText
+        android:id="@+id/inputCalculator2"
+        android:inputType="numberDecimal"
+        android:layout_width="168dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/background_box"
+        android:drawablePadding="8dp"
+        android:gravity="center"
+        android:hint="2nd Input"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputCalculator" />
-
-    <ImageView
-        android:id="@+id/calMin"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="62dp"
-        android:clickable="true"
-        android:src="@drawable/cal_min"
-        app:layout_constraintStart_toEndOf="@+id/calAdd"
         app:layout_constraintTop_toBottomOf="@+id/inputCalculator" />
 
     <ImageView
         android:id="@+id/calMul"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="66dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="52dp"
         android:clickable="true"
+        android:onClick="onMultiplyClicked"
         android:src="@drawable/cal_mul"
         app:layout_constraintStart_toEndOf="@+id/calMin"
-        app:layout_constraintTop_toBottomOf="@+id/inputCalculator" />
-
-    <ImageView
-        android:id="@+id/calDiv"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="66dp"
-        android:clickable="true"
-        android:src="@drawable/cal_div"
-        app:layout_constraintStart_toEndOf="@+id/calMul"
-        app:layout_constraintTop_toBottomOf="@+id/inputCalculator" />
-
-    <TextView
-        android:id="@+id/outputCalculator"
-        android:layout_width="168dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="60dp"
-        android:background="@drawable/background_box"
-        android:drawablePadding="8dp"
-        android:gravity="center"
-        android:hint="Result"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/calAdd" />
-
-    <ImageView
-        android:id="@+id/calCopy"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="56dp"
-        android:clickable="true"
-        android:src="@drawable/cal_copy"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/outputCalculator" />
+        app:layout_constraintTop_toBottomOf="@+id/inputCalculator2" />
 
     <ImageView
         android:id="@+id/calClear"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="60dp"
         android:clickable="true"
+        android:onClick="onClearClicked"
         android:src="@drawable/cal_clear"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/calCopy"
         app:layout_constraintTop_toBottomOf="@+id/outputCalculator" />
 
+    <ImageView
+        android:id="@+id/calCopy"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="60dp"
+        android:clickable="true"
+        android:onClick="onCopyClicked"
+        android:src="@drawable/cal_copy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/outputCalculator" />
+
+    <EditText
+        android:id="@+id/outputCalculator"
+        android:inputType="numberDecimal"
+        android:layout_width="168dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="56dp"
+        android:background="@drawable/background_box"
+        android:drawablePadding="8dp"
+        android:gravity="center"
+        android:hint="Result"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calAdd" />
+
+    <ImageView
+        android:id="@+id/calMin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="48dp"
+        android:clickable="true"
+        android:onClick="onSubtractClicked"
+        android:src="@drawable/cal_min"
+        app:layout_constraintStart_toEndOf="@+id/calAdd"
+        app:layout_constraintTop_toBottomOf="@+id/inputCalculator2" />
+
+    <ImageView
+        android:id="@+id/calDiv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="52dp"
+        android:clickable="true"
+        android:onClick="onDivideClicked"
+        android:src="@drawable/cal_div"
+        app:layout_constraintStart_toEndOf="@+id/calMul"
+        app:layout_constraintTop_toBottomOf="@+id/inputCalculator2" />
+
+    <ImageView
+        android:id="@+id/calAdd"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="48dp"
+        android:clickable="true"
+        android:onClick="onAddClicked"
+        android:src="@drawable/cal_add"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputCalculator2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
