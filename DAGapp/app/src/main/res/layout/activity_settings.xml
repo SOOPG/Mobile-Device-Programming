@@ -29,8 +29,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/returnButton" />
 
-    <TextView
-        android:id="@+id/textViewRole"
+    <EditText
+        android:id="@+id/settingUserRole"
         android:layout_width="120dp"
         android:layout_height="30dp"
         android:layout_marginTop="40dp"
@@ -44,7 +44,7 @@
         app:layout_constraintTop_toBottomOf="@+id/settingProfile" />
 
     <EditText
-        android:id="@+id/textViewUserName"
+        android:id="@+id/settingUserName"
         android:layout_width="160dp"
         android:layout_height="40dp"
         android:layout_marginTop="40dp"
@@ -55,10 +55,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textViewRole" />
+        app:layout_constraintTop_toBottomOf="@id/settingUserRole" />
 
     <EditText
-        android:id="@+id/textViewContact"
+        android:id="@+id/settingUserContact"
         android:layout_width="160dp"
         android:layout_height="40dp"
         android:layout_marginTop="40dp"
@@ -68,21 +68,22 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewUserName" />
+        app:layout_constraintTop_toBottomOf="@+id/settingUserName" />
 
     <EditText
-        android:id="@+id/textViewEmail"
+        android:id="@+id/settingUserEmail"
         android:layout_width="160dp"
         android:layout_height="40dp"
         android:layout_marginTop="40dp"
         android:background="@drawable/background_box"
         android:gravity="center"
-        android:text="Email"
+        android:textSize="10dp"
+        android:text="hfyms6@nottingham.edu.my"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textViewContact" />
+        app:layout_constraintTop_toBottomOf="@id/settingUserContact" />
 
     <TextView
         android:id="@+id/buttonToggleTheme"
@@ -96,13 +97,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textViewEmail" />
+        app:layout_constraintTop_toBottomOf="@id/settingUserEmail" />
 
     <TextView
         android:id="@+id/buttonLogout"
         android:layout_width="160dp"
         android:layout_height="40dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/background_logout"
         android:clickable="true"
         android:gravity="center"
@@ -110,6 +111,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/buttonToggleTheme" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonSaveSettings" />
+
+    <Button
+        android:id="@+id/buttonSaveSettings"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:onClick="onSaveUserSettingsClicked"
+        android:text="Save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonToggleTheme" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
