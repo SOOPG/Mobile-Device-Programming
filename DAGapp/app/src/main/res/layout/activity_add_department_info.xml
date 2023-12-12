@@ -17,8 +17,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
-
     <!-- Department Head Name Input Field -->
     <EditText
         android:id="@+id/editTextDepartmentHeadName"
@@ -58,6 +56,7 @@
         android:layout_marginTop="120dp"
         android:background="@drawable/background_box"
         android:clickable="true"
+        android:onClick="onEditDepartmentClicked"
         android:gravity="center"
         android:text="Edit"
         android:textSize="20dp"
