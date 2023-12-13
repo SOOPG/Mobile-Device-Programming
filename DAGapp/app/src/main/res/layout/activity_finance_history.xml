@@ -106,7 +106,7 @@
                     android:textSize="16sp" />
 
                 <TextView
-                    android:id="@+id/arts_head_name"
+                    android:id="@+id/recentIncomeHistoryAmount"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
@@ -115,7 +115,7 @@
                     android:textSize="14sp" />
 
                 <TextView
-                    android:id="@+id/recentIncomeHistoryAmount"
+                    android:id="@+id/recentIncomeHistoryCategory"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
@@ -225,6 +225,16 @@
                 android:padding="16dp">
 
                 <TextView
+                    android:id="@+id/recentBudgetingHistory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="Budgeting"
+                    android:textColor="@color/greyish_black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
                     android:id="@+id/recentBudgetingHistoryTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -292,6 +302,7 @@
         android:layout_marginBottom="4dp"
         android:background="@color/bright_yellow"
         android:text="Clear"
+        android:onClick="clearFinanceHistory"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

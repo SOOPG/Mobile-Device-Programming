@@ -35,17 +35,6 @@
         app:layout_constraintStart_toStartOf="@+id/imageViewBankBalance"
         app:layout_constraintTop_toTopOf="@+id/imageViewBankBalance" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:background="@drawable/background_box"
-        android:text="Add"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextDescription" />
-
     <ImageView
         android:id="@+id/returnButton"
         android:layout_width="wrap_content"
@@ -70,7 +59,7 @@
         app:layout_constraintTop_toBottomOf="@+id/returnButton" />
 
     <EditText
-        android:id="@+id/editTextTitle"
+        android:id="@+id/incomeTitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="Title"
@@ -82,7 +71,7 @@
         android:background="@color/bright_yellow"/>
 
     <EditText
-        android:id="@+id/editTextDate"
+        android:id="@+id/incomeDate"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
@@ -92,10 +81,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/incomeTitle" />
 
     <EditText
-        android:id="@+id/editTextAmount"
+        android:id="@+id/incomeAmount"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
@@ -105,10 +94,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editTextDate" />
+        app:layout_constraintTop_toBottomOf="@id/incomeDate"/>
 
     <EditText
-        android:id="@+id/editTextCategory"
+        android:id="@+id/incomeCategory"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
@@ -118,10 +107,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editTextAmount" />
+        app:layout_constraintTop_toBottomOf="@id/incomeAmount" />
 
     <EditText
-        android:id="@+id/editTextDescription"
+        android:id="@+id/incomeDescription"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
@@ -131,6 +120,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editTextCategory" />
+        app:layout_constraintTop_toBottomOf="@id/incomeCategory"/>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/background_box"
+        android:text="Add"
+        android:onClick="addIncome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/incomeDescription" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

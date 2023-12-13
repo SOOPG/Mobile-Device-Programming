@@ -1,7 +1,11 @@
 package com.example.dagapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -20,6 +24,46 @@ public class CalculatorActivity extends AppCompatActivity {
         editTextNumber1 = findViewById(R.id.inputCalculator);
         editTextNumber2 = findViewById(R.id.inputCalculator2);
         textViewResult = findViewById(R.id.outputCalculator);
+
+        EditText editTextBankBalance = findViewById(R.id.bank_balance);
+        editTextBankBalance.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                // Not used
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                // Not used
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                saveBankBalance(s.toString());
+            }
+        });
+
+        loadBankBalance();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        loadBankBalance();
+    }
+
+    private void saveBankBalance(String balance) {
+        SharedPreferences sharedPreferences = getSharedPreferences("FinanceData", MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("bankBalance", balance);
+        editor.apply();
+    }
+
+    private void loadBankBalance() {
+        SharedPreferences sharedPreferences = getSharedPreferences("FinanceData", MODE_PRIVATE);
+        String balance = sharedPreferences.getString("bankBalance", "0.00");
+        EditText editTextBankBalance = findViewById(R.id.bank_balance);
+        editTextBankBalance.setText(balance);
     }
 
     public void onReturnClicked(View view) {

@@ -12,14 +12,18 @@ public class SettingsActivity extends AppCompatActivity {
 
     private EditText userNameEditText;
     private EditText userRoleEditText;
+    private EditText userEmailEditText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
+
         // Initialize TextViews
         userNameEditText = findViewById(R.id.settingUserName);
         userRoleEditText = findViewById(R.id.settingUserRole);
+        userEmailEditText = findViewById(R.id.settingUserEmail);
+
         // Load the user settings
         loadUserSettings();
     }
@@ -28,25 +32,31 @@ public class SettingsActivity extends AppCompatActivity {
         SharedPreferences preferences = getSharedPreferences("UserSettings", MODE_PRIVATE);
         String userName = preferences.getString("UserName", "Soo Min Hao"); // Default value if none found
         String userRole = preferences.getString("UserRole", "Vice Pres."); // Default value if none found
+        String userEmail = preferences.getString("UserEmail", "hfyms6@nottingham.edu.my"); // Default value if none found
 
         // Set the user settings to the TextViews
         userNameEditText.setText(userName);
         userRoleEditText.setText(userRole);
+        userEmailEditText.setText(userEmail);
+
     }
 
     public void onSaveUserSettingsClicked(View view) {
 
         userNameEditText = findViewById(R.id.settingUserName); // User Name
         userRoleEditText = findViewById(R.id.settingUserRole); // User Role
+        userEmailEditText = findViewById(R.id.settingUserEmail); // User Email
 
         String userName = userNameEditText.getText().toString();
         String userRole = userRoleEditText.getText().toString();
+        String userEmail = userEmailEditText.getText().toString();
 
         // Save to SharedPreferences
         SharedPreferences preferences = getSharedPreferences("UserSettings", MODE_PRIVATE);
         SharedPreferences.Editor editor = preferences.edit();
         editor.putString("UserName", userName);
         editor.putString("UserRole", userRole);
+        editor.putString("UserEmail", userEmail);
         editor.apply();
 
         // Optional by provide feedback to the user
