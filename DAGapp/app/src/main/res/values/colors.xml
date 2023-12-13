@@ -15,4 +15,9 @@
     <color name="radio_department_green">#92F6D8</color>
     <color name="video_department_pink">#ED72AD</color>
 
+    <!-- Finance History Colour-->
+    <color name="hist_inc_green">#B9F3BC</color>
+    <color name="hist_expens_red">#EC837B</color>
+    <color name="hist_budget_blue">#7ECFF3</color>
+
 </resources>

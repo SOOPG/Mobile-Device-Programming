@@ -47,52 +47,254 @@
         app:layout_constraintStart_toStartOf="@+id/imageViewBankBalance"
         app:layout_constraintTop_toTopOf="@+id/imageViewBankBalance" />
 
+    <!-- Edit Button -->
+    <GridLayout
+        android:id="@+id/gridLayoutHistory"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:columnCount="1"
+        android:padding="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonClearHistory"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewHistoryTitle"
+        app:layout_constraintVertical_bias="1.0">
+
+        <!-- Latest Income -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            app:cardBackgroundColor="@color/hist_inc_green"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/recentIncomeHistory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="Income"
+                    android:textColor="@color/greyish_black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/recentIncomeHistoryTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="Title"
+                    android:textColor="@color/greyish_black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/recentIncomeHistoryDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="Date"
+                    android:textColor="@color/greyish_black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/arts_head_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="Amount"
+                    android:textColor="@color/greyish_black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/recentIncomeHistoryAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="Category"
+                    android:textColor="@color/greyish_black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/recentIncomeHistoryDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="Description"
+                    android:textColor="@color/greyish_black"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Latest Expenses -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            app:cardBackgroundColor="@color/hist_expens_red"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"> <!-- Change the color accordingly -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/recentExpenseHistory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="Expenses"
+                    android:textColor="@color/greyish_black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/recentExpenseHistoryTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="Title"
+                    android:textColor="@color/greyish_black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/recentExpenseHistoryDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="Date"
+                    android:textColor="@color/greyish_black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/recentExpenseHistoryAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="Amount"
+                    android:textColor="@color/greyish_black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/recentExpenseHistoryCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="Category"
+                    android:textColor="@color/greyish_black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/recentExpenseHistoryDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="Description"
+                    android:textColor="@color/greyish_black"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Latest Budgeting -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            app:cardBackgroundColor="@color/hist_budget_blue"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"> <!-- Change the color accordingly -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/recentBudgetingHistoryTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="Title"
+                    android:textColor="@color/greyish_black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/recentBudgetingHistoryDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="Date"
+                    android:textColor="@color/greyish_black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/recentBudgetingHistoryAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="Amount"
+                    android:textColor="@color/greyish_black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/recentBudgetingHistoryCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="Category"
+                    android:textColor="@color/greyish_black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/recentBudgetingHistoryDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="Description"
+                    android:textColor="@color/greyish_black"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </GridLayout>
+
     <TextView
         android:id="@+id/textViewHistoryTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:text="History"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintTop_toBottomOf="@id/returnButton"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="32dp"/>
-
-    <!-- This FrameLayout is a placeholder for your history items -->
-    <FrameLayout
-        android:id="@+id/frameLayoutHistory"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="@android:color/white"
-        app:layout_constraintTop_toBottomOf="@id/textViewHistoryTitle"
-        app:layout_constraintBottom_toTopOf="@id/buttonEditHistory"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:padding="16dp">
-        <!-- You might want to add a RecyclerView or programmatically add rows here -->
-    </FrameLayout>
-
-    <!-- Edit Button -->
-    <Button
-        android:id="@+id/buttonEditHistory"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Edit"
-        android:background="@color/bright_yellow"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="16dp"/>
+        app:layout_constraintTop_toBottomOf="@id/returnButton" />
 
     <!-- Clear Button -->
     <Button
         android:id="@+id/buttonClearHistory"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Clear"
+        android:layout_marginBottom="4dp"
         android:background="@color/bright_yellow"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Clear"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
