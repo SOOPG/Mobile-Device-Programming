@@ -13,6 +13,7 @@ public class SettingsActivity extends AppCompatActivity {
     private EditText userNameEditText;
     private EditText userRoleEditText;
     private EditText userEmailEditText;
+    private EditText userContactEditText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +24,7 @@ public class SettingsActivity extends AppCompatActivity {
         userNameEditText = findViewById(R.id.settingUserName);
         userRoleEditText = findViewById(R.id.settingUserRole);
         userEmailEditText = findViewById(R.id.settingUserEmail);
+        userContactEditText = findViewById(R.id.settingUserContact);
 
         // Load the user settings
         loadUserSettings();
@@ -33,12 +35,13 @@ public class SettingsActivity extends AppCompatActivity {
         String userName = preferences.getString("UserName", "Soo Min Hao"); // Default value if none found
         String userRole = preferences.getString("UserRole", "Vice Pres."); // Default value if none found
         String userEmail = preferences.getString("UserEmail", "hfyms6@nottingham.edu.my"); // Default value if none found
+        String userContact = preferences.getString("UserContact", "012-xxxxxxx"); // Default value if none found
 
         // Set the user settings to the TextViews
         userNameEditText.setText(userName);
         userRoleEditText.setText(userRole);
         userEmailEditText.setText(userEmail);
-
+        userContactEditText.setText(userContact);
     }
 
     public void onSaveUserSettingsClicked(View view) {
@@ -46,10 +49,12 @@ public class SettingsActivity extends AppCompatActivity {
         userNameEditText = findViewById(R.id.settingUserName); // User Name
         userRoleEditText = findViewById(R.id.settingUserRole); // User Role
         userEmailEditText = findViewById(R.id.settingUserEmail); // User Email
+        userContactEditText = findViewById(R.id.settingUserContact); // User Number
 
         String userName = userNameEditText.getText().toString();
         String userRole = userRoleEditText.getText().toString();
         String userEmail = userEmailEditText.getText().toString();
+        String userContact = userContactEditText.getText().toString();
 
         // Save to SharedPreferences
         SharedPreferences preferences = getSharedPreferences("UserSettings", MODE_PRIVATE);
@@ -57,6 +62,7 @@ public class SettingsActivity extends AppCompatActivity {
         editor.putString("UserName", userName);
         editor.putString("UserRole", userRole);
         editor.putString("UserEmail", userEmail);
+        editor.putString("UserContact", userContact);
         editor.apply();
 
         // Optional by provide feedback to the user
