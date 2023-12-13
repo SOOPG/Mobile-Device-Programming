@@ -36,15 +36,15 @@ public class FinanceHistoryActivity extends AppCompatActivity {
         });
 
         loadBankBalance();
+        loadIncomeHistory();
+        loadExpensesHistory();
+        loadBudgetingHistory();
     }
 
     @Override
     protected void onResume() {
         super.onResume();
         loadBankBalance();
-        loadIncomeHistory();
-        loadExpensesHistory();
-        loadBudgetingHistory();
     }
 
     private void saveBankBalance(String balance) {
@@ -124,43 +124,59 @@ public class FinanceHistoryActivity extends AppCompatActivity {
         historyDescription.setText(description);
     }
 
+
     // Clear all the finance history
     public void clearFinanceHistory(View view) {
-        TextView historyClearIncomeTitle = findViewById(R.id.recentIncomeHistoryTitle);
-        TextView historyClearIncomeDate = findViewById(R.id.recentIncomeHistoryDate);
-        TextView historyClearIncomeAmount = findViewById(R.id.recentIncomeHistoryAmount);
-        TextView historyClearIncomeCategory = findViewById(R.id.recentIncomeHistoryCategory);
-        TextView historyClearIncomeDescription = findViewById(R.id.recentIncomeHistoryDescription);
+        clearFinanceHistoryViews(); // Clear TextViews
+        clearFinanceHistoryData(); // Clear SharedPreferences
+    }
 
-        historyClearIncomeTitle.setText("");
-        historyClearIncomeDate.setText("");
-        historyClearIncomeAmount.setText("");
-        historyClearIncomeCategory.setText("");
-        historyClearIncomeDescription.setText("");
+    // Method to clear SharedPreferences data
+    private void clearFinanceHistoryData() {
+        SharedPreferences sharedPreferences = getSharedPreferences("FinanceData", MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
 
-        TextView historyClearExpensesTitle = findViewById(R.id.recentExpenseHistoryTitle);
-        TextView historyClearExpensesDate = findViewById(R.id.recentExpenseHistoryDate);
-        TextView historyClearExpensesAmount = findViewById(R.id.recentExpenseHistoryAmount);
-        TextView historyClearExpensesCategory = findViewById(R.id.recentExpenseHistoryCategory);
-        TextView historyClearExpensesDescription = findViewById(R.id.recentExpenseHistoryDescription);
+        editor.remove("incomeTitle");
+        editor.remove("incomeDate");
+        editor.remove("incomeAmount");
+        editor.remove("incomeCategory");
+        editor.remove("incomeDescription");
 
-        historyClearExpensesTitle.setText("");
-        historyClearExpensesDate.setText("");
-        historyClearExpensesAmount.setText("");
-        historyClearExpensesCategory.setText("");
-        historyClearExpensesDescription.setText("");
+        editor.remove("expensesTitle");
+        editor.remove("expensesDate");
+        editor.remove("expensesAmount");
+        editor.remove("expensesCategory");
+        editor.remove("expensesDescription");
 
-        TextView historyClearBudgetingTitle = findViewById(R.id.recentBudgetingHistoryTitle);
-        TextView historyClearBudgetingDate = findViewById(R.id.recentBudgetingHistoryDate);
-        TextView historyClearBudgetingAmount = findViewById(R.id.recentBudgetingHistoryAmount);
-        TextView historyClearBudgetingCategory = findViewById(R.id.recentBudgetingHistoryCategory);
-        TextView historyClearBudgetingDescription = findViewById(R.id.recentBudgetingHistoryDescription);
+        editor.remove("budgetingTitle");
+        editor.remove("budgetingDate");
+        editor.remove("budgetingAmount");
+        editor.remove("budgetingCategory");
+        editor.remove("budgetingDescription");
 
-        historyClearBudgetingTitle.setText("");
-        historyClearBudgetingDate.setText("");
-        historyClearBudgetingAmount.setText("");
-        historyClearBudgetingCategory.setText("");
-        historyClearBudgetingDescription.setText("");
+        editor.apply();
+    }
+
+
+    private void clearFinanceHistoryViews() {
+        // Clear the text views
+        ((TextView) findViewById(R.id.recentIncomeHistoryTitle)).setText("N/A");
+        ((TextView) findViewById(R.id.recentIncomeHistoryDate)).setText("N/A");
+        ((TextView) findViewById(R.id.recentIncomeHistoryAmount)).setText("N/A");
+        ((TextView) findViewById(R.id.recentIncomeHistoryCategory)).setText("N/A");
+        ((TextView) findViewById(R.id.recentIncomeHistoryDescription)).setText("N/A");
+
+        ((TextView) findViewById(R.id.recentExpenseHistoryTitle)).setText("N/A");
+        ((TextView) findViewById(R.id.recentExpenseHistoryDate)).setText("N/A");
+        ((TextView) findViewById(R.id.recentExpenseHistoryAmount)).setText("N/A");
+        ((TextView) findViewById(R.id.recentExpenseHistoryCategory)).setText("N/A");
+        ((TextView) findViewById(R.id.recentExpenseHistoryDescription)).setText("N/A");
+
+        ((TextView) findViewById(R.id.recentBudgetingHistoryTitle)).setText("N/A");
+        ((TextView) findViewById(R.id.recentBudgetingHistoryDate)).setText("N/A");
+        ((TextView) findViewById(R.id.recentBudgetingHistoryAmount)).setText("N/A");
+        ((TextView) findViewById(R.id.recentBudgetingHistoryCategory)).setText("N/A");
+        ((TextView) findViewById(R.id.recentBudgetingHistoryDescription)).setText("N/A");
     }
 
     public void onReturnClicked(View view) {
