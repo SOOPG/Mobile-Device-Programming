@@ -47,7 +47,6 @@
         app:layout_constraintStart_toStartOf="@+id/imageViewBankBalance"
         app:layout_constraintTop_toTopOf="@+id/imageViewBankBalance" />
 
-    <!-- Edit Button -->
     <GridLayout
         android:id="@+id/gridLayoutHistory"
         android:layout_width="0dp"

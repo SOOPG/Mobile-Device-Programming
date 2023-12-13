@@ -18,50 +18,320 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-        <!-- Inventory Title -->
-        <TextView
-            android:id="@+id/textViewInventoryTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Inventory"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            app:layout_constraintTop_toBottomOf="@+id/returnButton"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="32dp"/>
+    <GridLayout
+        android:id="@+id/gridLayoutHistory"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:columnCount="2"
+        android:padding="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonAddItemToInventory"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewInventoryTitle"
+        app:layout_constraintVertical_bias="1.0">
 
-        <!-- Static headers -->
-        <!-- You would create TextViews for 'Picture', 'Rental Price', 'Date Borrowed', 'Status' headers here -->
-
-        <!-- Add Item to Inventory Button -->
-        <Button
-            android:id="@+id/buttonAddItemToInventory"
+        <!-- Inventory Card for Camera Equipment -->
+        <androidx.cardview.widget.CardView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Update Inventory"
-            android:background="@drawable/background_box"
-            app:layout_constraintStart_toStartOf="parent"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_margin="16dp" />
-
-        <!-- Inventory Items Placeholder -->
-        <!-- This ScrollView will later be replaced with a RecyclerView -->
-        <ScrollView
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:layout_constraintTop_toBottomOf="@id/textViewInventoryTitle"
-            app:layout_constraintBottom_toTopOf="@id/buttonAddItemToInventory"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:padding="16dp">
+            app:layout_constraintTop_toTopOf="parent">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <!-- Add your static inventory entries here -->
-                <!-- Each entry can be a horizontal LinearLayout containing an ImageView for the picture and TextViews for other details -->
+                android:background="@color/inv_equip_type_camera"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/inventoryCameraEquipment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="Camera Equipment"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/equipmentNameCamera1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Name and price"
+                    android:inputType="text"
+                    android:textSize="12dp" />
+
+                <EditText
+                    android:id="@+id/equipmentNameCamera2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Name and price"
+                    android:inputType="text"
+                    android:textSize="12dp" />
+
+                <EditText
+                    android:id="@+id/equipmentNameCamera3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Name and price"
+                    android:inputType="text"
+                    android:textSize="12dp" />
+
+                <EditText
+                    android:id="@+id/equipmentNameCamera4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Name and price"
+                    android:inputType="text"
+                    android:textSize="12dp" />
+
+                <EditText
+                    android:id="@+id/equipmentNameCamera5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Name and price"
+                    android:inputType="text"
+                    android:textSize="12dp" />
             </LinearLayout>
-        </ScrollView>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Inventory Card for Audio Equipment -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/inv_equip_type_audio"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/inventoryAudioEquipment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="Audio Equipment"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/equipmentNameAudio1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Name and price"
+                    android:inputType="text"
+                    android:textSize="12dp" />
+
+                <EditText
+                    android:id="@+id/equipmentNameAudio2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Name and price"
+                    android:inputType="text"
+                    android:textSize="12dp" />
+
+                <EditText
+                    android:id="@+id/equipmentNameAudio3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Name and price"
+                    android:inputType="text"
+                    android:textSize="12dp" />
+
+                <EditText
+                    android:id="@+id/equipmentNameAudio4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Name and price"
+                    android:inputType="text"
+                    android:textSize="12dp" />
+
+                <EditText
+                    android:id="@+id/equipmentNameAudio5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Name and price"
+                    android:inputType="text"
+                    android:textSize="12dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Inventory Card for Tripod Equipment -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/inv_equip_type_tripod"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/inventoryTripodEquipment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="Tripod Equipment"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/equipmentNameTripod1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Name and price"
+                    android:inputType="text"
+                    android:textSize="12dp" />
+
+                <EditText
+                    android:id="@+id/equipmentNameTripod2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Name and price"
+                    android:inputType="text"
+                    android:textSize="12dp" />
+
+                <EditText
+                    android:id="@+id/equipmentNameTripod3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Name and price"
+                    android:inputType="text"
+                    android:textSize="12dp" />
+
+                <EditText
+                    android:id="@+id/equipmentNameTripod4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Name and price"
+                    android:inputType="text"
+                    android:textSize="12dp" />
+
+                <EditText
+                    android:id="@+id/equipmentNameTripod5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Name and price"
+                    android:inputType="text"
+                    android:textSize="12dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Inventory Card for Camera Equipment -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/inv_equip_type_lighting"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/inventoryLightingEquipment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="Lighting Equipment"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/equipmentNameLighting1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Name and price"
+                    android:inputType="text"
+                    android:textSize="12dp" />
+
+                <EditText
+                    android:id="@+id/equipmentNameLighting2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Name and price"
+                    android:inputType="text"
+                    android:textSize="12dp" />
+
+                <EditText
+                    android:id="@+id/equipmentNameLighting3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Name and price"
+                    android:inputType="text"
+                    android:textSize="12dp" />
+
+                <EditText
+                    android:id="@+id/equipmentNameLighting4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Name and price"
+                    android:inputType="text"
+                    android:textSize="12dp" />
+
+                <EditText
+                    android:id="@+id/equipmentNameLighting5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Name and price"
+                    android:inputType="text"
+                    android:textSize="12dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/textViewInventoryTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Inventory"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/returnButton" />
+
+    <Button
+        android:id="@+id/buttonAddItemToInventory"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@drawable/background_box"
+        android:text="Update Inventory"
+        android:onClick="updateInventory"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
