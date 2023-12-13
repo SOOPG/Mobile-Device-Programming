@@ -34,6 +34,7 @@ public class AddDepartmentInfoActivity extends AppCompatActivity {
         loadDepartmentInfo();
     }
 
+    //Load department informations
     private void loadDepartmentInfo() {
         SharedPreferences prefs = getSharedPreferences("DepartmentInfo", MODE_PRIVATE);
         String departmentHeadName = prefs.getString(currentDepartment + "HeadName", "");

@@ -124,6 +124,7 @@ public class FinanceHistoryActivity extends AppCompatActivity {
         historyDescription.setText(description);
     }
 
+    // Clear all the finance history
     public void clearFinanceHistory(View view) {
         TextView historyClearIncomeTitle = findViewById(R.id.recentIncomeHistoryTitle);
         TextView historyClearIncomeDate = findViewById(R.id.recentIncomeHistoryDate);

@@ -46,7 +46,7 @@ public class ClubEventsActivity extends AppCompatActivity {
         // Load events from SharedPreferences
         SharedPreferences prefs = getSharedPreferences("ClubEvents", MODE_PRIVATE);
 
-        // Load the arts department event
+        // Load all department events
         editTextEventArtsTitle.setText(prefs.getString("eventArtsTitle", ""));
         editTextEventArtsDate.setText(prefs.getString("eventArtsDate", ""));
         editTextEventArtsStatus.setText(prefs.getString("eventArtsStatus", ""));

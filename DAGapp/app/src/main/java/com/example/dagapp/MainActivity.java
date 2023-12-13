@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onLoginButtonClicked(View view) {
-        // For debugging
+        // SINCE OFFLINE, THIS IS USED
         Intent intent = new Intent(MainActivity.this, HomeActivity.class);
         startActivity(intent);
     }

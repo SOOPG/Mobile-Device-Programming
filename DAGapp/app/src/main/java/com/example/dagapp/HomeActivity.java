@@ -99,6 +99,7 @@ public class HomeActivity extends AppCompatActivity {
 
 
     public void onSettingsClicked(View view) {
+        // Navigate to Settings page
         Intent intent = new Intent(HomeActivity.this, SettingsActivity.class);
         startActivity(intent);
     }

@@ -75,11 +75,13 @@ public class FinanceMainActivity extends AppCompatActivity {
     }
 
     public void onBudgetingClicked(View view) {
+        //Start budgeting
         Intent intent = new Intent(FinanceMainActivity.this, BudgetingActivity.class);
         startActivity(intent);
     }
 
     public void onHistoryClicked(View view) {
+        //Start history
         Intent intent = new Intent(FinanceMainActivity.this, FinanceHistoryActivity.class);
         startActivity(intent);
     }

@@ -23,7 +23,7 @@ public class DepartmentInfoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_department_info);
 
-        // Load Department Informations
+        // Load Department Informations\
         loadDepartmentInfo();
 
         // Set up click listeners for contact information
